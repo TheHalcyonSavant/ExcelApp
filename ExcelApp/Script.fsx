@@ -8,6 +8,9 @@
 
 open System
 open System.IO
-let a = Excel.App(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"Excel","recnik.xlsm"))
+
+let myDocuments = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+let fileName = Path.Combine(myDocuments, "Visual Studio 2010", "Projects", "VocabularyGame", "dictionary.xlsm")
+let a = Excel.App(fileName)
 printfn "%s" (a.getString("A5"))
 a.Close
