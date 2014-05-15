@@ -1,0 +1,3 @@
+F#:
+  frameworks:
+    - Interop.Excel.dll
